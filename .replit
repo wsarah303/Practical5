@@ -1,0 +1,12 @@
+run = "dotnet run --project SMS.Web"
+language="dotnet"
+
+[nix]
+channel = "stable-21_11"
+
+[languages.dotnet]
+pattern = "**/*.cs"
+
+[languages.dotnet.languageServer]
+start = "omnisharp -lsp"
+
