@@ -7,18 +7,23 @@ namespace SMS.Data.Models
     {
         public int Id { get; set; }
 
+        [Required]
         public string Name { get; set; }
-
+        [EmailAddress]
         public string Email { get; set; }
-
+        [Required]
         public string Course { get; set; }
 
-        public int Age { get; set; } 
 
+        [Range(16,80)]
+        public int Age { get; set; }
+      
+        [Range(0,100)]
         public double Grade { get; set; }
 
+        [Url]
         public string PhotoUrl { get; set; }     
-
+  
         // Read-Only property - not stored in database
         public string Classification => Classify();
 

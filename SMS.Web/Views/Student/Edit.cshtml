@@ -13,9 +13,51 @@
         <input type="hidden" asp-for="Id" class="form-control"/>
 
         <!-- add form groups for each student attributed being edited -->
+
         <!-- you can copy the necessary groups from Create.cshtml     -->
 
-       
+               <!-- name -->
+        <div class="mt-3">
+            <label asp-for="Name" class="form-label"></label>
+            <input asp-for="Name" class="form-control"/>
+            <span  asp-validation-for="Name" class="text-danger"></span>
+        </div>
+    
+        <!-- course -->
+        <div class="mt-3">
+            <label asp-for="Course" class="form-label"></label>
+            <input asp-for="Course" class="form-control"/>
+            <span  asp-validation-for="Course" class="text-danger"></span>
+        </div>
+
+        <!--move Age and grade input groups in 2 columns in single row -->      
+        <div class="row mt-3">
+            <div class="col">
+                <label asp-for="Age" class="form-label"></label>
+                <input asp-for="Age" class="form-control"/>
+                <span asp-validation-for="Age" class="text-danger"></span>
+            </div>
+
+            <div class="col">
+                <label asp-for="Grade" class="form-label"></label>
+                <input asp-for="Grade" class="form-control"/>
+                <span  asp-validation-for= "Grade" class="text-danger"></span>
+            </div>
+        </div>
+
+        <!-- email -->
+        <div class="mt-3">
+            <label asp-for="Email" class="form-label"></label>
+            <input asp-for="Email" class="form-control"/>
+            <span  asp-validation-for="Email" class="text-danger"></span>
+        </div>
+
+        <!-- add PhotoUrl input group - ensure input field type is url -->
+        <div class="mt-3">
+            <label asp-for="PhotoUrl"class="form-label"></label>
+            <input   type="url" class="form-control"/>
+            <span asp-validation-for="PhotoUrl" class="text-danger"></span>
+        </div>
         <!-- submit button and cancel link which navigates to Index action -->
         <div class="mt-3">
             <input type="submit" value="Save" class="btn btn-primary"/>
